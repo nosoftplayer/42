@@ -1,1 +1,0 @@
-ls -t --group-directories-first --ignore=".*" --format=commas
