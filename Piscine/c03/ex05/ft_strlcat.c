@@ -1,21 +1,11 @@
-// #include <stdio.h>
-// #include <string.h>
-int	src_length(char *src, int i)
+int ft_strlen(char *str)
 {
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+	int	len;
 
-int	dest_length(char *dest, int k)
-{
-	while (dest[k] != '\0')
-	{
-		k++;
-	}
-	return (k);
+	len = 0;
+	while (str[len])
+		++len;
+	return (len);
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
@@ -27,8 +17,9 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	i = 0;
 	k = 0;
 	j = 0;
-	i = src_length(src, i);
-	k = dest_length(dest, k);
+	i = ft_strlen(src);
+	k = ft_strlen(dest);
+
 	if (i >= size)
 		return (k + i);
 	while (src[j] != '\0' && i < size)
@@ -40,6 +31,9 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (k + i);
 }
 /*
+
+#include <stdio.h>
+#include <string.h>
 int main()
 {
 	char dest[13] = "Hello";
