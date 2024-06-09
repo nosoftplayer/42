@@ -10,7 +10,7 @@ int ft_strlen(char *str)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
 	int	k;
 	int	j;
 
