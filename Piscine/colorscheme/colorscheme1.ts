@@ -22,3 +22,4 @@ class Theme
 }
 
 export const theme = new Theme("mycolorscheme");
+
